@@ -1,0 +1,15 @@
+{
+  "name": "listbot",
+  "version": "1.0.0",
+  "description": "Create channel-specific lists in Slack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Corey Hanson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
