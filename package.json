@@ -4,12 +4,16 @@
   "description": "Create channel-specific lists in Slack",
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
   "author": "Corey Hanson",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "jasmine-node": "^1.14.5",
+    "redis": "^2.4.1"
+  },
+  "devDependencies": {
+    "jasmine": "^2.3.2"
   }
 }

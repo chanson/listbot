@@ -3,25 +3,14 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var redis = require('redis');
 
-// if (process.env.REDISTOGO_URL) {
-//   var rtg   = require('url').parse(process.env.REDISTOGO_URL);
-//   var client = redis.createClient(rtg.port, rtg.hostname);
-
-//   client.auth(rtg.auth.split(':')[1]);
-// } else {
-//   var client = redis.createClient();
-// }
-
-// client.on('connect', function() {
-//   console.log('connected to redis');
-// });
-
 var list = require('./routes/list');
 
 var app = express();
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', list);
