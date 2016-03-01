@@ -22,7 +22,7 @@ var listExists = false;
 router.post('/', function(req, res) {
 
   var rbody = req.body,
-    trigger = rbody.command,
+    trigger = rbody.trigger_word,
     item = rbody.text.replace(new RegExp(trigger, 'gi'), '').trim(),
     channelId = rbody.channel_id,
     userId = rbody.user_id,
